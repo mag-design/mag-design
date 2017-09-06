@@ -4,7 +4,9 @@
   "description": "mag design language style",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp",
+    "dev": "serve example -p 8911",
+    "start": "rollup -w -c rollup.config.js"
   },
   "repository": {
     "type": "git",
@@ -12,12 +14,24 @@
   },
   "keywords": [
     "css",
-    "mag-design"
+    "mag-design",
+    "ui"
   ],
   "author": "Johnny",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/searchfe/mag-design/issues"
   },
-  "homepage": "https://github.com/searchfe/mag-design#readme"
+  "homepage": "https://github.com/searchfe/mag-design#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.8.0",
+    "gulp-less": "^3.3.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-rimraf": "^0.2.1",
+    "gulp-sourcemaps": "^2.6.1",
+    "less-plugin-autoprefix": "^1.5.1",
+    "rollup": "^0.49.2",
+    "serve": "^6.0.6"
+  }
 }
