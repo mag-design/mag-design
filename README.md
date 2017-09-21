@@ -1,5 +1,14 @@
 # Mag Design
 
+## Install
+```shell
+// npm
+npm install mag-design --save
+
+// bower
+bower install mag-design --save
+```
+
 ## Usage
 ### link
 ```html
