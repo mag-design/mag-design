@@ -1,0 +1,24 @@
+{
+  "name": "mag-design",
+  "description": "mag design language style",
+  "main": "",
+  "authors": [
+    "Johnny"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "css",
+    "mag-design",
+    "ui"
+  ],
+  "homepage": "https://github.com/mag-design/mag-design",
+  "ignore": [
+    "doc",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "example",
+    "src"
+  ]
+}

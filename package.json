@@ -1,6 +1,6 @@
 {
   "name": "mag-design",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "mag design language style",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/searchfe/mag-design.git"
+    "url": "git+https://github.com/mag-design/mag-design"
   },
   "keywords": [
     "css",
@@ -20,9 +20,9 @@
   "author": "Johnny",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/searchfe/mag-design/issues"
+    "url": "https://github.com/mag-design/mag-design/issues"
   },
-  "homepage": "https://github.com/searchfe/mag-design#readme",
+  "homepage": "https://github.com/mag-design/mag-design#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.8.0",

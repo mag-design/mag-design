@@ -1,0 +1,43 @@
+/**
+ * font
+ *
+ * 字体优先取系统默认字体
+ * 字号为2/4/8的倍数
+ * 文字行高比率介于1.4~1.6之间
+ */
+
+@font-family: ~'-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Segoe UI", "Helvetica Neue", "PingFang SC", "Noto Sans", "Noto Sans CJK SC", sans-serif';
+
+@font-size-list: .12rem, .14rem, .16rem, .18rem, .2rem, .22rem, .24rem, .26rem, .28rem, .30rem, .32rem;
+@line-height-list: .18rem, .22rem, .26rem, .28rem, .3rem, .32rem, .34rem, .34rem, .36rem, .38rem, .4rem;
+
+.md-font-mixin() {
+    font-family: @font-family;
+    font-weight: 400;
+}
+
+.generate-font(@n, @index: 1) when (@index =< @n) {
+    .md-font-@{index} {
+        font-size: extract(@font-size-list, @index);
+        line-height: extract(@line-height-list, @index);
+        .md-font-mixin;
+    }
+    .generate-font(@n, (@index + 1));
+}
+
+.generate-font(11);
+
+@font-color-alpha-list: 100%, 88%, 54%, 36%;
+
+.generate-font-color(@n, @index: 1) when (@index =< @n) {
+    @alpha: extract(@font-color-alpha-list, @index);
+    .md-font-color-black-@{index} {
+        color: rgba(0, 0, 0, @alpha);
+    }
+    .md-font-color-white-@{index} {
+        color: rgba(255, 255, 255, @alpha);
+    }
+    .generate-font-color(@n, (@index + 1));
+}
+
+.generate-font-color(4);

@@ -1,0 +1,662 @@
+html {
+    font-size: 100px
+}
+.md-container {
+    margin: .1rem 0;
+    padding: .1rem .17rem .15rem;
+    width: auto;
+    word-break: break-word;
+    word-wrap: break-word;
+    border: 0 none
+}
+.md-container-tight {
+    padding: .1rem .17rem .15rem;
+    width: auto;
+    word-break: break-word;
+    word-wrap: break-word;
+    border: 0 none
+}
+.md-container-tile {
+    margin: 0;
+    padding: 0
+}
+.md-flexbox,
+.md-row {
+    width: auto;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-box-pack: justify;
+    -webkit-box-align: stretch;
+    -webkit-box-lines: single;
+    display: -webkit-flex;
+    -webkit-justify-content: space-between;
+    -webkit-align-items: stretch;
+    -webkit-align-content: flex-start;
+    -webkit-flex-wrap: nowrap
+}
+.md-row {
+    margin-right: -1.03092784%;
+    margin-left: -1.03092784%
+}
+.md-row-tight {
+    margin-right: -1px;
+    margin-left: 0
+}
+.md-row-tile {
+    position: relative;
+    margin: 0 -.17rem
+}
+.md-row-tile .md-row {
+    padding: 0 .17rem
+}
+.md-row-top {
+    position: relative;
+    margin-top: -.1rem
+}
+.md-row-top .md-row:first-child {
+    padding-top: .1rem
+}
+.md-row-bottom {
+    position: relative;
+    margin-bottom: -.15rem
+}
+.md-row-bottom .md-row:last-child {
+    padding-bottom: .15rem
+}
+.md-row *,
+.md-row-bottom *,
+.md-row-tile *,
+.md-row-top * {
+    box-sizing: border-box
+}
+.md-span1,
+.md-span10,
+.md-span11,
+.md-span12,
+.md-span2,
+.md-span3,
+.md-span4,
+.md-span5,
+.md-span6,
+.md-span7,
+.md-span8,
+.md-span9 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 1.03092784%;
+    padding-left: 1.03092784%
+}
+.md-row-tight .md-span1,
+.md-row-tight .md-span10,
+.md-row-tight .md-span11,
+.md-row-tight .md-span12,
+.md-row-tight .md-span2,
+.md-row-tight .md-span3,
+.md-row-tight .md-span4,
+.md-row-tight .md-span5,
+.md-row-tight .md-span6,
+.md-row-tight .md-span7,
+.md-row-tight .md-span8,
+.md-row-tight .md-span9 {
+    padding-right: 1px;
+    padding-left: 0
+}
+.md-span1 {
+    width: 8.33333333%;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto
+}
+.md-span2 {
+    width: 16.66666667%;
+    -webkit-box-flex: 2;
+    -webkit-flex: 2 2 auto
+}
+.md-span3 {
+    width: 25%;
+    -webkit-box-flex: 3;
+    -webkit-flex: 3 3 auto
+}
+.md-span4 {
+    width: 33.33333333%;
+    -webkit-box-flex: 4;
+    -webkit-flex: 4 4 auto
+}
+.md-span5 {
+    width: 41.66666667%;
+    -webkit-box-flex: 5;
+    -webkit-flex: 5 5 auto
+}
+.md-span6 {
+    width: 50%;
+    -webkit-box-flex: 6;
+    -webkit-flex: 6 6 auto
+}
+.md-span7 {
+    width: 58.33333333%;
+    -webkit-box-flex: 7;
+    -webkit-flex: 7 7 auto
+}
+.md-span8 {
+    width: 66.66666667%;
+    -webkit-box-flex: 8;
+    -webkit-flex: 8 8 auto
+}
+.md-span9 {
+    width: 75%;
+    -webkit-box-flex: 9;
+    -webkit-flex: 9 9 auto
+}
+.md-span10 {
+    width: 83.33333333%;
+    -webkit-box-flex: 10;
+    -webkit-flex: 10 10 auto
+}
+.md-span11 {
+    width: 91.66666667%;
+    -webkit-box-flex: 11;
+    -webkit-flex: 11 11 auto
+}
+.md-span12 {
+    width: 100%;
+    -webkit-box-flex: 12;
+    -webkit-flex: 12 12 auto
+}
+.md-span-middle {
+    display: box;
+    box-orient: vertical;
+    box-align: center;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: center;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-justify-content: center
+}
+.md-font-1 {
+    font-size: .12rem;
+    line-height: .18rem;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Segoe UI","Helvetica Neue","PingFang SC","Noto Sans","Noto Sans CJK SC",sans-serif;
+    font-weight: 400
+}
+.md-font-2 {
+    font-size: .14rem;
+    line-height: .22rem;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Segoe UI","Helvetica Neue","PingFang SC","Noto Sans","Noto Sans CJK SC",sans-serif;
+    font-weight: 400
+}
+.md-font-3 {
+    font-size: .16rem;
+    line-height: .26rem;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Segoe UI","Helvetica Neue","PingFang SC","Noto Sans","Noto Sans CJK SC",sans-serif;
+    font-weight: 400
+}
+.md-font-4 {
+    font-size: .18rem;
+    line-height: .28rem;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Segoe UI","Helvetica Neue","PingFang SC","Noto Sans","Noto Sans CJK SC",sans-serif;
+    font-weight: 400
+}
+.md-font-5 {
+    font-size: .2rem;
+    line-height: .3rem;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Segoe UI","Helvetica Neue","PingFang SC","Noto Sans","Noto Sans CJK SC",sans-serif;
+    font-weight: 400
+}
+.md-font-6 {
+    font-size: .22rem;
+    line-height: .32rem;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Segoe UI","Helvetica Neue","PingFang SC","Noto Sans","Noto Sans CJK SC",sans-serif;
+    font-weight: 400
+}
+.md-font-7 {
+    font-size: .24rem;
+    line-height: .34rem;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Segoe UI","Helvetica Neue","PingFang SC","Noto Sans","Noto Sans CJK SC",sans-serif;
+    font-weight: 400
+}
+.md-font-8 {
+    font-size: .26rem;
+    line-height: .34rem;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Segoe UI","Helvetica Neue","PingFang SC","Noto Sans","Noto Sans CJK SC",sans-serif;
+    font-weight: 400
+}
+.md-font-9 {
+    font-size: .28rem;
+    line-height: .36rem;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Segoe UI","Helvetica Neue","PingFang SC","Noto Sans","Noto Sans CJK SC",sans-serif;
+    font-weight: 400
+}
+.md-font-10 {
+    font-size: .3rem;
+    line-height: .38rem;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Segoe UI","Helvetica Neue","PingFang SC","Noto Sans","Noto Sans CJK SC",sans-serif;
+    font-weight: 400
+}
+.md-font-11 {
+    font-size: .32rem;
+    line-height: .4rem;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Segoe UI","Helvetica Neue","PingFang SC","Noto Sans","Noto Sans CJK SC",sans-serif;
+    font-weight: 400
+}
+.md-font-color-black-1 {
+    color: #000
+}
+.md-font-color-white-1 {
+    color: #fff
+}
+.md-font-color-black-2 {
+    color: rgba(0,0,0,.88)
+}
+.md-font-color-white-2 {
+    color: rgba(255,255,255,.88)
+}
+.md-font-color-black-3 {
+    color: rgba(0,0,0,.54)
+}
+.md-font-color-white-3 {
+    color: rgba(255,255,255,.54)
+}
+.md-font-color-black-4 {
+    color: rgba(0,0,0,.36)
+}
+.md-font-color-white-4 {
+    color: rgba(255,255,255,.36)
+}
+.md-color-gray-0 {
+    color: #f8f9fa
+}
+.md-color-gray-1 {
+    color: #f1f3f5
+}
+.md-color-gray-2 {
+    color: #e9ecef
+}
+.md-color-gray-3 {
+    color: #dee2e6
+}
+.md-color-gray-4 {
+    color: #ced4da
+}
+.md-color-gray-5 {
+    color: #adb5bd
+}
+.md-color-gray-6 {
+    color: #868e96
+}
+.md-color-gray-7 {
+    color: #495057
+}
+.md-color-gray-8 {
+    color: #343a40
+}
+.md-color-gray-9 {
+    color: #212529
+}
+.md-color-red-0 {
+    color: #fff5f5
+}
+.md-color-red-1 {
+    color: #ffe3e3
+}
+.md-color-red-2 {
+    color: #ffc9c9
+}
+.md-color-red-3 {
+    color: #ffa8a8
+}
+.md-color-red-4 {
+    color: #ff8787
+}
+.md-color-red-5 {
+    color: #ff6b6b
+}
+.md-color-red-6 {
+    color: #fa5252
+}
+.md-color-red-7 {
+    color: #f03e3e
+}
+.md-color-red-8 {
+    color: #e03131
+}
+.md-color-red-9 {
+    color: #c92a2a
+}
+.md-color-pink-0 {
+    color: #fff0f6
+}
+.md-color-pink-1 {
+    color: #ffdeeb
+}
+.md-color-pink-2 {
+    color: #fcc2d7
+}
+.md-color-pink-3 {
+    color: #faa2c1
+}
+.md-color-pink-4 {
+    color: #f783ac
+}
+.md-color-pink-5 {
+    color: #f06595
+}
+.md-color-pink-6 {
+    color: #e64980
+}
+.md-color-pink-7 {
+    color: #d6336c
+}
+.md-color-pink-8 {
+    color: #c2255c
+}
+.md-color-pink-9 {
+    color: #a61e4d
+}
+.md-color-grape-0 {
+    color: #f8f0fc
+}
+.md-color-grape-1 {
+    color: #f3d9fa
+}
+.md-color-grape-2 {
+    color: #eebefa
+}
+.md-color-grape-3 {
+    color: #e599f7
+}
+.md-color-grape-4 {
+    color: #da77f2
+}
+.md-color-grape-5 {
+    color: #cc5de8
+}
+.md-color-grape-6 {
+    color: #be4bdb
+}
+.md-color-grape-7 {
+    color: #ae3ec9
+}
+.md-color-grape-8 {
+    color: #9c36b5
+}
+.md-color-grape-9 {
+    color: #862e9c
+}
+.md-color-violet-0 {
+    color: #f3f0ff
+}
+.md-color-violet-1 {
+    color: #e5dbff
+}
+.md-color-violet-2 {
+    color: #d0bfff
+}
+.md-color-violet-3 {
+    color: #b197fc
+}
+.md-color-violet-4 {
+    color: #9775fa
+}
+.md-color-violet-5 {
+    color: #845ef7
+}
+.md-color-violet-6 {
+    color: #7950f2
+}
+.md-color-violet-7 {
+    color: #7048e8
+}
+.md-color-violet-8 {
+    color: #6741d9
+}
+.md-color-violet-9 {
+    color: #5f3dc4
+}
+.md-color-indigo-0 {
+    color: #edf2ff
+}
+.md-color-indigo-1 {
+    color: #dbe4ff
+}
+.md-color-indigo-2 {
+    color: #bac8ff
+}
+.md-color-indigo-3 {
+    color: #91a7ff
+}
+.md-color-indigo-4 {
+    color: #748ffc
+}
+.md-color-indigo-5 {
+    color: #5c7cfa
+}
+.md-color-indigo-6 {
+    color: #4c6ef5
+}
+.md-color-indigo-7 {
+    color: #4263eb
+}
+.md-color-indigo-8 {
+    color: #3b5bdb
+}
+.md-color-indigo-9 {
+    color: #364fc7
+}
+.md-color-blue-0 {
+    color: #e8f7ff
+}
+.md-color-blue-1 {
+    color: #ccedff
+}
+.md-color-blue-2 {
+    color: #a3daff
+}
+.md-color-blue-3 {
+    color: #72c3fc
+}
+.md-color-blue-4 {
+    color: #4dadf7
+}
+.md-color-blue-5 {
+    color: #329af0
+}
+.md-color-blue-6 {
+    color: #228ae6
+}
+.md-color-blue-7 {
+    color: #1c7cd6
+}
+.md-color-blue-8 {
+    color: #1b6ec2
+}
+.md-color-blue-9 {
+    color: #1862ab
+}
+.md-color-cyan-0 {
+    color: #e3fafc
+}
+.md-color-cyan-1 {
+    color: #c5f6fa
+}
+.md-color-cyan-2 {
+    color: #99e9f2
+}
+.md-color-cyan-3 {
+    color: #66d9e8
+}
+.md-color-cyan-4 {
+    color: #3bc9db
+}
+.md-color-cyan-5 {
+    color: #22b8cf
+}
+.md-color-cyan-6 {
+    color: #15aabf
+}
+.md-color-cyan-7 {
+    color: #1098ad
+}
+.md-color-cyan-8 {
+    color: #0c8599
+}
+.md-color-cyan-9 {
+    color: #0b7285
+}
+.md-color-teal-0 {
+    color: #e6fcf5
+}
+.md-color-teal-1 {
+    color: #c3fae8
+}
+.md-color-teal-2 {
+    color: #96f2d7
+}
+.md-color-teal-3 {
+    color: #63e6be
+}
+.md-color-teal-4 {
+    color: #38d9a9
+}
+.md-color-teal-5 {
+    color: #20c997
+}
+.md-color-teal-6 {
+    color: #12b886
+}
+.md-color-teal-7 {
+    color: #0ca678
+}
+.md-color-teal-8 {
+    color: #099268
+}
+.md-color-teal-9 {
+    color: #087f5b
+}
+.md-color-green-0 {
+    color: #ebfbee
+}
+.md-color-green-1 {
+    color: #d3f9d8
+}
+.md-color-green-2 {
+    color: #b2f2bb
+}
+.md-color-green-3 {
+    color: #8ce99a
+}
+.md-color-green-4 {
+    color: #69db7c
+}
+.md-color-green-5 {
+    color: #51cf66
+}
+.md-color-green-6 {
+    color: #40c057
+}
+.md-color-green-7 {
+    color: #37b24d
+}
+.md-color-green-8 {
+    color: #2f9e44
+}
+.md-color-green-9 {
+    color: #2b8a3e
+}
+.md-color-lime-0 {
+    color: #f4fce3
+}
+.md-color-lime-1 {
+    color: #e9fac8
+}
+.md-color-lime-2 {
+    color: #d8f5a2
+}
+.md-color-lime-3 {
+    color: #c0eb75
+}
+.md-color-lime-4 {
+    color: #a9e34b
+}
+.md-color-lime-5 {
+    color: #94d82d
+}
+.md-color-lime-6 {
+    color: #82c91e
+}
+.md-color-lime-7 {
+    color: #74b816
+}
+.md-color-lime-8 {
+    color: #66a80f
+}
+.md-color-lime-9 {
+    color: #5c940d
+}
+.md-color-yellow-0 {
+    color: #fff9db
+}
+.md-color-yellow-1 {
+    color: #fff3bf
+}
+.md-color-yellow-2 {
+    color: #ffec99
+}
+.md-color-yellow-3 {
+    color: #ffe066
+}
+.md-color-yellow-4 {
+    color: #ffd43b
+}
+.md-color-yellow-5 {
+    color: #fcc419
+}
+.md-color-yellow-6 {
+    color: #fab005
+}
+.md-color-yellow-7 {
+    color: #f59f00
+}
+.md-color-yellow-8 {
+    color: #f08c00
+}
+.md-color-yellow-9 {
+    color: #e67700
+}
+.md-color-orange-0 {
+    color: #fff4e6
+}
+.md-color-orange-1 {
+    color: #ffe8cc
+}
+.md-color-orange-2 {
+    color: #ffd8a8
+}
+.md-color-orange-3 {
+    color: #ffc078
+}
+.md-color-orange-4 {
+    color: #ffa94d
+}
+.md-color-orange-5 {
+    color: #ff922b
+}
+.md-color-orange-6 {
+    color: #fd7e14
+}
+.md-color-orange-7 {
+    color: #f76707
+}
+.md-color-orange-8 {
+    color: #e8590c
+}
+.md-color-orange-9 {
+    color: #d9480f
+}
+/*# sourceMappingURL=mag-design.css.map */

@@ -1,0 +1,176 @@
+/**
+ * grid
+ *
+ * 栅格基础框架
+ * 采用流式栅格布局，页面等分为12n，其中内容73，间距24，共(73+24)*12-24=1140
+ * 左右各留12/1140 padding
+ * 最左&最右的padding采用 -12/1140 margin 消除
+ */
+
+@grid-columns :         12;     // 12n栅格系统
+@grid-columns-width :   97;     // 1n宽度(包含border&padding)
+@grid-columns-padding : 12;     // 栅格左右内间距(单边)
+
+@container-margin :         .1rem;    // 卡片外边距(上下)
+@container-padding-x :      .17rem;    // 卡片左右边距
+@container-padding-top :    .1rem;     // 卡片上边距
+@container-padding-bottom : .15rem;    // 卡片下边距
+
+// 卡片容器样式
+.md-container {
+    margin: @container-margin 0;
+    padding: @container-padding-top @container-padding-x @container-padding-bottom;
+    width: auto;
+    word-break: break-word;     // 单词间不折行
+    word-wrap: break-word;
+    border: 0 none;
+}
+
+// 搜索tab垂类下卡片不需要间隔
+.md-container-tight {
+    padding: @container-padding-top @container-padding-x @container-padding-bottom;
+    width: auto;
+    word-break: break-word;     // 单词间不折行
+    word-wrap: break-word;
+    border: 0 none;
+}
+
+// 铺满整个页面的结果，可用于单页唯一答案等特殊展现
+.md-container-tile {
+    margin: 0;
+    padding: 0;
+}
+
+
+// 栅格父容器、伸缩盒模型父容器样式
+.md-flexbox,
+.md-row {
+    width: auto;
+    // 旧版伸缩盒模型
+    display: -webkit-box;
+    -webkit-box-orient: horizontal; // 子元素左右排列
+    -webkit-box-direction: normal;  // 子元素顺序排列
+    -webkit-box-pack: justify;      // 子元素左右方向两端对齐
+    -webkit-box-align: stretch;     // 子元素垂直方向顶部对齐
+    -webkit-box-lines: single;      // multiple属性不被支持!!!!!WTF!!!!!
+    // 新版伸缩盒模型
+    display: -webkit-flex;
+    -webkit-flex-direction: row;            // 子元素左右顺序排列
+    -webkit-justify-content: space-between; // 子元素左右方向两端对齐
+    -webkit-align-items: stretch;           // 子元素垂直方向顶部对齐
+    -webkit-align-content: flex-start;      // 子元素垂直方向顶部对齐(多行情况)
+    -webkit-flex-wrap: nowrap;              // 子元素溢出时不换行(为兼容安卓qq浏览器,暂时不允许换行)
+}
+.md-row {
+    margin-right: percentage(-@grid-columns-padding / (@grid-columns-width * @grid-columns));
+    margin-left: percentage(-@grid-columns-padding / (@grid-columns-width * @grid-columns));
+}
+// 1px间隔的栅格，脱离标准栅格，仅用于特殊展现，如三联章、四连涨图片等
+.md-row-tight {
+    margin-right: -1px;
+    margin-left: 0;
+}
+// 撑满结果的容器，脱离标准栅格，仅用于特殊展现，如横滑图片等
+.md-row-tile {
+    position: relative;
+    margin: 0 -@container-padding-x;
+    .md-row {
+        padding: 0 @container-padding-x;
+    }
+}
+.md-row-top {
+    position: relative;
+    margin-top: -@container-padding-top;
+    .md-row:first-child {
+        padding-top: @container-padding-top;
+    }
+}
+.md-row-bottom {
+    position: relative;
+    margin-bottom: -@container-padding-bottom;
+    .md-row:last-child {
+        padding-bottom: @container-padding-bottom;
+    }
+}
+.md-row,
+.md-row-tile,
+.md-row-top,
+.md-row-bottom {
+    * {
+        -webkit-box-sizing: border-box;     // for android 2~3
+        box-sizing: border-box;
+    }
+}
+
+// 栅格子容器样式
+.make-grid(@grid-columns);
+
+.common-grid-columns(@sum) {
+    .col(@index) {                              // initial
+        @item: ~".md-span@{index}";
+        .col((@index + 1), @item);
+    }
+    .col(@index, @list) when (@index =< @sum) { // general
+        @item: ~".md-span@{index}";
+        .col((@index + 1), ~"@{list}, @{item}");
+    }
+    .col(@index, @list) when (@index > @sum) {  // terminal
+        @{list} {
+            position: relative;
+            min-height: 1px;
+            padding-right: percentage(@grid-columns-padding / (@grid-columns-width * @sum));
+            padding-left: percentage(@grid-columns-padding / (@grid-columns-width * @sum));
+        }
+    }
+    .col(1);
+}
+
+.tight-grid-columns(@sum) {
+    .col(@index) {                              // initial
+        @item: ~".md-row-tight .md-span@{index}";
+        .col((@index + 1), @item);
+    }
+    .col(@index, @list) when (@index =< @sum) { // general
+        @item: ~".md-row-tight .md-span@{index}";
+        .col((@index + 1), ~"@{list}, @{item}");
+    }
+    .col(@index, @list) when (@index > @sum) {  // terminal
+        @{list} {
+            padding-right: 1px;
+            padding-left: 0;
+        }
+    }
+    .col(1);
+}
+
+.calmd-grid-columns(@sum, @index: 1) when (@index =< @sum) {
+    .md-span@{index} {
+        width: (@index * 100% / @sum);
+        -webkit-box-flex: @index;
+        //-webkit-flex-grow: @index;
+        -webkit-flex: @index @index auto;
+    }
+    .calmd-grid-columns(@sum, (@index + 1));
+}
+
+.make-grid(@sum) {
+    .common-grid-columns(@sum);
+    .tight-grid-columns(@sum);
+    .calmd-grid-columns(@sum);
+}
+
+// md-span 子元素垂直居中
+.md-span-middle {
+    display: box;
+    box-orient: vertical;
+    box-align: center;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: center;
+    display: flex;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
