@@ -19,6 +19,9 @@
     "test",
     "tests",
     "example",
-    "src"
+    "src",
+    "gulpfile.js",
+    "rollup.config.js",
+    "package-lock.json"
   ]
 }
